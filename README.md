@@ -2,41 +2,52 @@
 license: mit
 language:
 - en
-pipeline_tag: token-classification
+pipeline_tag: feature-extraction
 ---
-Coming Soon...
 
-res2vec OpenWebText-1B Word Embeddings
-==================================
+# res2vec OpenWebText-1B Word Embeddings
 
-Dimensions: 188
-Vocabulary: 1,008,133 words
+**Dimensions:** 188
+**Vocabulary:** 1,008,133 words
+**Format:** NumPy (.npy)
 
-Benchmarks
-----------
+## Benchmarks
 
-Model                              Dim   Corpus                    SimLex-999   WordSim-353   
---------------------------         ----  -----------------------  -----------  -----------   
-word2vec Skip-gram                 300   Wikipedia 1B              0.37         0.63          
-GloVe                              300   Wikipedia+Gigaword 6B     0.42         0.66          
-res2vec RT OpenWebText-1B          188   OpenWebText 1B            0.30         0.60          
+| Model | Dim | Corpus | SimLex-999 | WordSim-353 |
+|-------|-----|--------|------------|-------------|
+| word2vec Skip-gram | 300 | Wikipedia 1B | 0.37 | 0.63 |
+| GloVe | 300 | Wikipedia+Gigaword 6B | 0.42 | 0.66 |
+| **res2vec** | **188** | **OpenWebText 1B** | **0.296** | **0.597** |
 
-Example Similarities (cosine)
------------------------------
+## Example Similarities (cosine)
 
-               word2vec*   GloVe*    RT (OpenWebText-1B, 188d)
-king – queen     ~0.65      ~0.75    0.69
-man  – woman     ~0.77      ~0.83    0.80
-cat  – dog       ~0.76      ~0.88    0.85
-good – bad       ~0.60      ~0.78    0.86
+| Pair | Similarity |
+|------|------------|
+| king – queen | 0.693 |
+| man – woman | 0.798 |
+| cat – dog | 0.854 |
+| good – bad | 0.855 |
 
-Usage
------
+## Usage
 
-Python:
-    from gensim.models import KeyedVectors
-    model = KeyedVectors.load_word2vec_format("res2vec_188d_v1.txt")
-    model.most_similar("computer", topn=10)
+```python
+import numpy as np
+import json
 
-Download
---------
+# Load embeddings
+embeddings = np.load("res2vec_owt1b_188d_embeddings.npy")  # (1008133, 188)
+
+# Load vocabulary
+with open("res2vec_owt1b_188d_vocab.json") as f:
+    vocab = json.load(f)  # {"word": index, ...}
+```
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `res2vec_owt1b_188d_embeddings.npy` | Embedding matrix, shape `(1008133, 188)`, float32 |
+| `res2vec_owt1b_188d_vocab.json` | Word-to-index mapping, `{"word": index, ...}` |
+| `res2vec_owt1b_188d_metric.npy` | Learned metric tensor, shape `(188, 188)`, float64 |
+| `res2vec_owt1b_188d_results.json` | Training metadata and diagnostics |
+| `res2vec_owt1b_188d_evaluation.json` | Benchmark scores and word pair similarities |
