@@ -51,3 +51,5 @@ with open("res2vec_owt1b_188d_vocab.json") as f:
 | `res2vec_owt1b_188d_metric.npy` | Learned metric tensor, shape `(188, 188)`, float64 |
 | `res2vec_owt1b_188d_results.json` | Training metadata and diagnostics |
 | `res2vec_owt1b_188d_evaluation.json` | Benchmark scores and word pair similarities |
+
+This is an initial proof-of-concept/demonstration of the Resonance Theory technique. Will be adding more versions and refining as I go. Please let me know what you think! :-)
