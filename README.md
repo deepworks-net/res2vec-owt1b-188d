@@ -7,9 +7,9 @@ pipeline_tag: feature-extraction
 
 # res2vec OpenWebText-1B Word Embeddings
 
-**Dimensions:** 188
-**Vocabulary:** 1,008,133 words
-**Format:** NumPy (.npy)
+- **Dimensions:** 188
+- **Vocabulary:** 1,008,133 words
+- **Format:** NumPy (.npy)
 
 ## Benchmarks
 
