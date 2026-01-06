@@ -6,6 +6,8 @@ language:
 
 # res2vec OpenWebText-1B Word Embeddings
 
+![Model at a Glance](info.jpg)     
+
 | | |
 |---|---|
 | **Dimensions** | 188 |
