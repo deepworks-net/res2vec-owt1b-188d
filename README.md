@@ -1,5 +1,8 @@
 ---
 license: mit
+language:
+- en
+pipeline_tag: token-classification
 ---
 Coming Soon...
 
