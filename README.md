@@ -65,3 +65,7 @@ with open("res2vec_owt1b_188d_vocab.json") as f:
 | `res2vec_owt1b_188d_evaluation.json` | Benchmark scores and word pair similarities |
 
 This is an initial proof-of-concept/demonstration of the Resonance Theory technique. Will be adding more versions and refining as I go. Please let me know what you think! :-)
+
+## Links
+- Huggingface: [https://huggingface.co/deepworks-net/res2vec-owt1b-188d](https://huggingface.co/deepworks-net/res2vec-owt1b-188d)
+- Github: [https://github.com/deepworks-net/res2vec-owt1b-188d](https://github.com/deepworks-net/res2vec-owt1b-188d)
