@@ -32,7 +32,7 @@ Usage
 
 Python:
     from gensim.models import KeyedVectors
-    model = KeyedVectors.load_word2vec_format("res2vec_OWT_188d_v1.txt")
+    model = KeyedVectors.load_word2vec_format("res2vec_188d_v1.txt")
     model.most_similar("computer", topn=10)
 
 Download
