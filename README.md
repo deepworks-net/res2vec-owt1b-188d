@@ -7,9 +7,22 @@ pipeline_tag: feature-extraction
 
 # res2vec OpenWebText-1B Word Embeddings
 
-- **Dimensions:** 188
-- **Vocabulary:** 1,008,133 words
-- **Format:** NumPy (.npy)
+| | |
+|---|---|
+| **Dimensions** | 188 |
+| **Vocabulary** | 1,008,133 words |
+| **Embedding Size** | 723 MB |
+| **Total Size** | ~744 MB |
+| **Format** | NumPy (.npy) |
+
+## Model Properties
+
+| Metric | Value |
+|--------|-------|
+| Information Capacity (I) | 0.106 |
+| Average Resonance (R) | 0.071 |
+| Optimal Dimension (d*) | 187.6 |
+| Fixed Point | ✓ |
 
 ## Benchmarks
 
