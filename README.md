@@ -2,7 +2,6 @@
 license: mit
 language:
 - en
-pipeline_tag: feature-extraction
 ---
 
 # res2vec OpenWebText-1B Word Embeddings
